@@ -1,15 +1,3 @@
-// const express = require('express');
-// const app = express();
-// const PORT = 3010;
-
-// app.use((req, res) => {
-//     res.send("Hello, this is my first World"); // Use res instead of req
-// });
-
-// app.listen(PORT, () => {
-//     console.log(`Server is up and running on port ${PORT}! Ready to handle the file request`);
-// });
-
 const express = require('express');
 const app=express();
 let port = 3200;
@@ -31,11 +19,11 @@ app.use ("/library-3",(req,res,next)=>{
 })
 
 app.get("/library-2",(res,req)=>{
-    res.send("<h1> lib 2 entered</h1>");
+    res.send("<h1> lib 2 entered</h1>")
 })
 
 app.get("/library-3",(res,req)=>{
-    res.send("<h1> lib 3 entered</h1>");
+    res.send("<h1> lib 3 entered</h1>")
 })
 
 app.listen(port,()=>{

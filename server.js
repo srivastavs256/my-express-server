@@ -30,14 +30,18 @@ app.use ("/library-3",(req,res,next)=>{
     next();
 })
 
-app.get("/library-2",(res,req)=>{
+app.get("/library-2",(req,res)=>{
     res.send("<h1> lib 2 entered</h1>");
 })
 
-app.get("/library-3",(res,req)=>{
+app.get("/library-3",(req,res)=>{
     res.send("<h1> lib 3 entered</h1>");
 })
 
 app.listen(port,()=>{
     console.log("server is running");
 })
+
+app.listen(port, () => {
+console.log(`Server is up and running on port ${port}! Ready to handle the file request`);
+});
